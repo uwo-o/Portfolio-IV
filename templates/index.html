@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo Campos | Portfolio WEB</title>
+    <!--Style sheet-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://kit.fontawesome.com/725c33a475.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+        <span id="flash-message" onclick="closeMessage()"><h3>{{message}}</h3></span>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <header>
+        <div class="btn-menu">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="menu open">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#academic">Academic</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="action-zone">
+            </div>
+        </div>
+    </header>
+
+    <div class="social open">
+        <div class="action-zone">
+        </div>
+        <ul>
+            <li><a href="https://github.com/uwo-o" target="_blank"><i class="fab fa-github"></i></a>
+            <li><a href="https://www.instagram.com/_h.go__/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <li><a href="https://www.linkedin.com/in/uwo-o/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <li><a href="https://www.behance.net/uwo-o" target="_blank"><i class="fab fa-behance"></i></a>
+        </ul>
+    </div>
+
+    <div class="scroll-down">
+        <a href="#about">
+            Scroll down
+            <i class="fas fa-angle-down"></i>
+        </a>
+    </div>
+
+    <section id="home">
+        <div class="container">
+            <div class="row-left">
+                <img src="{{url_for('static', filename='images/Hugo Campos Castro Image 1.png')}}" alt="Hugo Fernando Campos Castro">
+            </div>
+            <div class="row-right">
+                <h2>Hi i'm</h2>
+                <h1>HUGO CAMPOS</h1>
+                <p>And I'm a <span class="typing"></span></p>
+                <a href="#contact" id="btn">HIRE ME</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h1>About me</h1>
+        <h2>My introduction</h2>
+        <div class="container">
+            <div class="row-left" data-aos="fade-down">
+                <p>Web developer, i don’t have a lot of experience but i’m really eager to learn, I want to improve my abilities and knowledge. You can create my future, are you ready?</p>
+                <div class="experience">
+                    <div class="exp years" data-aos="fade-up" data-aos-delay="0">
+                        <h1>1-</h1>
+                        <h2>years of experience</h2>
+                    </div>
+                    <div class="exp projects" data-aos="fade-up" data-aos-delay="50">
+                        <h1>1</h1>
+                        <h2>completed projetcs</h2>
+                    </div>
+                    <div class="exp years" data-aos="fade-up" data-aos-delay="100">
+                        <h1>0</h1>
+                        <h2>companies worked</h2>
+                    </div>
+                </div>
+                <a href="" id="btn" data-aos="fade-up">DOWNLOAD CV</a>
+            </div>
+            <div class="row-right">
+                <img src="{{url_for('static', filename='images/Hugo Campos Castro Image 2.png')}}" alt="Hugo Fernando Campos Castro">
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h1>My skills</h1>
+        <h2>A little about my knowledge</h2>
+        <div class="swiper mySwiper2" data-aos="fade-left">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <i class="fab fa-html5"></i>
+                        <h2>HTML5</h2>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <i class="fab fa-css3-alt"></i>
+                        <h2>CSS3</h2>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star" style="font-weight: regular;"></i>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <i class="fab fa-js"></i>
+                        <h2>JavaScript</h2>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star" style="font-weight: regular;"></i>
+                        <i class="far fa-star" style="font-weight: regular;"></i>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <i class="fab fa-python"></i>
+                        <h2>Python</h2>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star" style="font-weight: regular;"></i>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <i class="fab fa-figma"></i>
+                        <h2>Figma</h2>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star" style="font-weight: regular;"></i>
+                        <i class="far fa-star" style="font-weight: regular;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </section>
+
+    <section id="academic">
+        <h1>Academic antecedents</h1>
+        <h2>A little about my studies</h2>
+        <div class="container">
+            <div class="data" data-aos="fade-right">
+                <p class="left">2018</p>
+                <div class="gui">
+                    <div class="circle"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="right">
+                    <h3>Middle Level Electronics Technician</h3>
+                    <p>Politecnic Instute of Santa Cruz - Chile</p>
+                </div>
+            </div>
+            <div class="data" data-aos="fade-left">
+                <div class="left">
+                    <h3>Course of GIT</h3>
+                    <p>Udemy - Chile</p>
+                </div>
+                <div class="gui">
+                    <div class="circle"></div>
+                    <div class="line"></div>
+                </div>
+                <p class="right">2021</p>
+            </div>
+            <div class="data" data-aos="fade-right">
+                <p class="left">2021</p>
+                <div class="gui">
+                    <div class="circle"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="right">
+                    <h3>Master in Python</h3>
+                    <p>Udemy - Chile</p>
+                </div>
+            </div>
+            <div class="data" data-aos="fade-left">
+                <div class="left">
+                    <h3>Computer Engineering</h3>
+                    <p>Federico Santa Maria Technical University - Chile</p>
+                </div>
+                <div class="gui">
+                    <div class="circle"></div>
+                </div>
+                <p class="right">Studying</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h1>My projects</h1>
+        <h2>Most recent works</h2>
+        <div class="swiper mySwiper" data-aos="fade-left">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="image">
+                        <img src="static/images/projects/project-cale.png" alt="Cale Frutos del mundo">
+                    </div>
+                    <div class="text">
+                        <h3>Project Cale</h3>
+                        <p>A simple landing page for a commerce, It was created in Django for a possible improve of itself, vanilla css and HTML5</p>
+                        <a href="https://www.cale-frutosdelmundo.com" target="_blank" id="btn">SEE PROJECT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        
+    </section>
+
+    <section id="contact">
+        <h1>Contact me</h1>
+        <h2>If you liked that you've seen, you might consider to contact me for some project</h2>
+        <div class="container">
+            <div class="row-left">
+                <a href="mailto:hugo.campos.c.2000@gmail.com" class="info">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Type me</h3>
+                        <p>hugo.campos.c.2000@gmail.com</p>
+                    </div>
+                </a>
+            </div>
+            <div class="row-right">
+                <form action="" method="post">
+                    <input type="text" name="name" id="name" required="true" placeholder="Your name">
+                    <input type="text" name="phone" id="phone" required="true" placeholder="Your phone number">
+                    <input type="email" name="email" id="email" required="true" placeholder="Your email">
+                    <textarea name="message" id="message" cols="30" rows="10" required="true" placeholder="Your message"></textarea>
+                    <input type="submit" value="GET IN TOUCH" id="btn">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright © 2021 Hugo Fernando Campos Castro (uwo)</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="{{url_for('static', filename='script/script.js')}}"></script>
+</body>
+</html>
