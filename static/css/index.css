@@ -926,14 +926,22 @@ footer{
     #home .container .row-right p{
         font-size: 16px;
     }
+
+    #skills .swiper{
+        width: 100%;
+    }
     
     #skills .swiper .swiper-slide{
         width: 250px;
-        height: 300px;
+        height: 350px;
     }
 
     #skills .swiper .swiper-slide div h2{
         font-size: 18px;
+    }
+
+    #projects .swiper{
+        width: 100%;
     }
 
     #projects .swiper .swiper-slide{
