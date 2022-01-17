@@ -110,7 +110,7 @@ header{
 }
 
 
-header .menu ul{
+.menu ul{
     background-color: var(--bg-color);
     display: flex;
     align-items: center;
@@ -120,26 +120,26 @@ header .menu ul{
     transition: .5s;
 }
 
-header .menu.open ul{
+.menu.open ul{
     transform: translateY(0);
 }
 
-header .menu:hover ul{
+.menu:hover ul{
     transform: translateY(0);
 }
 
-header .menu ul li{
+.menu ul li{
     margin: 20px 0px;
 }
 
-header .menu ul li a{
+.menu ul li a{
     color: var(--main-color);
     text-decoration: none;
     padding: 20px 20px;
     transition: .5s;
 }
 
-header .menu ul li a:hover{
+.menu ul li a:hover{
     background: linear-gradient(var(--main-color), var(--second-color));
     color: var(--bg-color);
 }
@@ -820,7 +820,7 @@ footer{
     }
 
     #about .container .row-right img{
-        width: 50vw;
+        width: 90vw;
         height: auto;
     }
 
@@ -857,7 +857,7 @@ footer{
         width: 100%;
     }
 
-    header .btn-menu{
+    .btn-menu{
         display: block;
         position: fixed;
         top: 15px;
@@ -867,7 +867,7 @@ footer{
         transition: .3s;
     }
 
-    header .btn-menu.open{
+    .btn-menu.open{
         transform: rotate(-180deg);
     }
 
@@ -877,20 +877,20 @@ footer{
 
     header{
         width: 100vw;
-    }
-
-    header .menu{
-        width: 100vw;
         transform: translateY(-100%);
         transition: .3s;
     }
 
-    header .menu ul{
+    .menu ul{
+        width: 100vw;
+    }
+
+    .menu ul{
         display: block;
         padding-top: 50px;
     }
 
-    header .menu.open{
+    .menu.open{
         transform: translateX(0);
         margin-top: -20px;
     }
@@ -920,7 +920,7 @@ footer{
     }
 
     #home .container .row-right h1{
-        font-size: 32px;
+        font-size: 64px;
     }
 
     #home .container .row-right p{
