@@ -45,12 +45,19 @@ function closeMessage(){
 
 //when the scroll is under 30px call a function
 
+var last_scroll=0;
+
 $(document).ready(function(){
     
     if ($(window).width() > 550) {
 
         $(window).scroll(function(){
-            if ($(this).scrollTop() < 30){
+            console.log(last_scroll, $(window).scrollTop());
+            if (last_scroll > $(this).scrollTop()){
+                $('.menu').addClass('open');
+                $('.social').addClass('open');
+            }
+            else if ($(this).scrollTop() < 30){
                 $('.menu').addClass('open');
                 $('.social').addClass('open');
             }
@@ -58,6 +65,7 @@ $(document).ready(function(){
                 $('.menu').removeClass('open');
                 $('.social').removeClass('open');
             }
+            last_scroll=$(this).scrollTop();
         });
     }else{
         $('.menu').removeClass('open');
